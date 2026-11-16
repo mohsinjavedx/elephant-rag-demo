@@ -1,0 +1,11 @@
+{
+  "filename": "elephant-source.pdf",
+  "size_bytes": 3888,
+  "page_count": 3,
+  "checksum_sha256": "18825034c1fd66fd36ad88d24cae75a1fe3cf94d50097fceb5cc59d6f451dd7e",
+  "temporary_name": "19359451-4be2-4d43-948c-38a9556c8033.pdf",
+  "temporary_path_pattern": "%TEMP%/research-pdf-*/<uuid>.pdf",
+  "staged_file_existed_inside_context": true,
+  "staged_file_deleted_after_context": true,
+  "staged_directory_deleted_after_context": true
+}

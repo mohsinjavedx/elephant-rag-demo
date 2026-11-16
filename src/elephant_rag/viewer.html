@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect a real elephant PDF through Markdown, normalization, chunking, embeddings and retrieval.">
+  <title>Elephant RAG Demo</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --font-size-base: 14px;
+      --background: light-dark(#ffffff, #181c1a);
+      --foreground: light-dark(#202823, #edf1ee);
+      --muted-foreground: light-dark(#56635a, #acb8ae);
+      --border: light-dark(#cdd5cf, #4a554d);
+      --primary: light-dark(#284a37, #cee3d3);
+      --primary-foreground: light-dark(#ffffff, #203226);
+      --accent: light-dark(#d8eddc, #34543c);
+      --accent-foreground: light-dark(#183622, #eef8f0);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--background); color: var(--foreground); font: 14px/1.6 system-ui, sans-serif; }
+    main { max-width: 960px; margin: 0 auto; padding: 28px 20px; }
+    h1, h2, h3, p { margin: 0; }
+    h2 { font-size: 22px; font-weight: 600; }
+    .btn, .form-select { font: inherit; color: var(--foreground); background: var(--background); border: 1px solid var(--border); border-radius: 5px; padding: 8px 12px; }
+    .btn { cursor: pointer; min-height: 42px; }
+    .btn-primary { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+    .btn:focus-visible, .form-select:focus-visible, summary:focus-visible { outline: 2px solid var(--foreground); outline-offset: 3px; }
+    .viz-controls { display: flex; flex-wrap: wrap; gap: 12px; }
+    .form-label { display: grid; gap: 5px; flex: 1 1 230px; min-width: 0; }
+    .form-select { width: 100%; min-width: 0; }
+    .text-small { font-size: 12px; }
+    .text-muted { color: var(--muted-foreground); }
+    pre, code { font: 13px/1.7 ui-monospace, Consolas, monospace; }
+    details { margin-block: 5px; }
+    summary { cursor: pointer; padding-block: 6px; }
+    mark { padding: 1px 0; }
+    @media (max-width: 480px) { main { padding: 18px 12px; } }
+  </style>
+</head>
+<body>
+  <main>__WALKTHROUGH_FRAGMENT__</main>
+</body>
+</html>

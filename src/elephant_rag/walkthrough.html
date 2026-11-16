@@ -1,0 +1,116 @@
+<div id="elephant-pipeline">
+  <style>
+    #elephant-pipeline { display: grid; gap: calc(var(--font-size-base) * 1); }
+    #elephant-pipeline .step-controls { display: flex; flex-wrap: wrap; gap: calc(var(--font-size-base) * .5); }
+    #elephant-pipeline .data-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; color: var(--foreground); }
+    #elephant-pipeline .data-text code { white-space: inherit; overflow-wrap: inherit; }
+    #elephant-pipeline .content { display: grid; gap: calc(var(--font-size-base) * .75); min-width: 0; }
+    #elephant-pipeline .source-image { display: block; width: 100%; max-width: 520px; height: auto; }
+    #elephant-pipeline mark { background: var(--accent); color: var(--accent-foreground); }
+    #elephant-pipeline details { overflow-wrap: anywhere; }
+    #elephant-pipeline summary { color: var(--foreground); }
+    #elephant-pipeline .small-gap { display: grid; gap: calc(var(--font-size-base) * .5); }
+    #elephant-pipeline .result { padding-block: calc(var(--font-size-base) * .5); border-bottom: 1px solid var(--border); }
+  </style>
+  <h2>One elephant document, six stages</h2>
+  <div class="step-controls" aria-label="Processing stages"></div>
+  <div class="viz-controls" id="elephant-controls"></div>
+  <div class="content" id="elephant-content" aria-live="polite"></div>
+  <script type="application/json" id="elephant-data">__ELEPHANT_DATA__</script>
+  <script>
+  (() => {
+    const root = document.getElementById('elephant-pipeline');
+    const data = JSON.parse(root.querySelector('#elephant-data').textContent);
+    const stageNames = ['1 PDF', '2 Markdown', '3 Normalized', '4 Chunks', '5 Embeddings', '6 Retrieval'];
+    const stageBar = root.querySelector('.step-controls');
+    const controls = root.querySelector('#elephant-controls');
+    const content = root.querySelector('#elephant-content');
+    const state = { stage: 0, page: 0, config: 'teaching', chunk: 0, query: 0 };
+    const escape = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const pre = (s) => `<pre class="data-text"><code>${escape(s)}</code></pre>`;
+    const detail = (label, body) => `<details><summary>${escape(label)}</summary>${body}</details>`;
+    const json = (s) => pre(JSON.stringify(s, null, 2));
+    const chunks = () => data.chunks[state.config].chunks;
+    const caption = (s) => `<div class="text-small text-muted">${escape(s)}</div>`;
+    const label = (title, id, options, selected) => `<label class="form-label">${escape(title)}<select class="form-select" id="${id}">${options.map((o, i) => `<option value="${i}" ${i === selected ? 'selected' : ''}>${escape(o)}</option>`).join('')}</select></label>`;
+    function saveState() {
+      if (window.openai?.setWidgetState) window.openai.setWidgetState({ modelContent: { stage: stageNames[state.stage], chunkConfiguration: state.config, selectedChunk: chunks()[state.chunk]?.demonstration.label }, privateContent: {...state} }).catch(() => {});
+    }
+    function render() {
+      stageBar.innerHTML = stageNames.map((title, i) => `<button class="btn ${i === state.stage ? 'btn-primary' : ''}" type="button" data-stage="${i}" aria-pressed="${i === state.stage}">${title}</button>`).join('');
+      const selected = chunks()[Math.min(state.chunk, chunks().length - 1)];
+      const page = data.normalization.pages[state.page];
+      controls.innerHTML = state.stage < 3
+        ? label('PDF page', 'elephant-page', ['Page 1 · nose', 'Page 2 · teeth and legs', 'Page 3 · ears and size'], state.page)
+        : label('Chunk configuration', 'elephant-config', ['Teaching · 35–65 tokens / overlap 12', 'Project defaults · 600–800 / overlap 100'], state.config === 'teaching' ? 0 : 1);
+      if (state.stage === 3 || state.stage === 4) controls.innerHTML += label('Chunk', 'elephant-chunk', chunks().map(c => `${c.demonstration.label} · page ${c.page_start} · ${c.metadata.token_count} tokens`), state.chunk);
+      if (state.stage === 5) controls.innerHTML += label('Question', 'elephant-question', data.retrieval.chunk_sets[state.config].map(r => r.question), state.query);
+      if (state.stage === 0) {
+        content.innerHTML = caption('Original PDF · three pages · nose, teeth, legs, ears and body size')
+          + `<img class="source-image" alt="Original elephant PDF page ${state.page + 1}" src="${data.source_images[state.page]}">`
+          + detail('Validation and text-layer checks', json({...data.validation, text_density: data.extraction.text_density}))
+          + caption('All six stages belong to this standalone project. Embeddings run locally on CPU; no database or API key is needed.');
+      } else if (state.stage === 1) {
+        content.innerHTML = caption(`Exact PyMuPDF4LLM Markdown · page ${state.page + 1} · includes running header and page counter`)
+          + pre(page.raw_text) + detail('Parser and source metadata', json({parser:data.extraction.parser, version:data.extraction.parser_version, document_id:data.normalization.document_id}));
+      } else if (state.stage === 2) {
+        const removed = page.removed_boundaries.map(r => ({kind:r.kind, raw_characters:`[${r.char_start}, ${r.char_end})`, removed_text:page.raw_text.slice(r.char_start,r.char_end)}));
+        content.innerHTML = caption('Repeated boundary furniture removed; sentences and newline placeholders preserved')
+          + `<div class="small-gap">${removed.map(r => `<div><code>${escape(r.kind)}</code> removed: <mark>${escape(r.removed_text)}</mark> <span class="text-small">${escape(r.raw_characters)}</span></div>`).join('')}</div>`
+          + pre(page.normalized_text) + detail('Exact normalized-to-raw character mappings', json(page.source_spans));
+      } else if (state.stage === 3) {
+        const overlap = selected.demonstration.overlap_with_previous_text;
+        const text = selected.normalized_text;
+        const marked = overlap ? `<mark>${escape(text.slice(0,overlap.length))}</mark>${escape(text.slice(overlap.length))}` : escape(text);
+        const source = data.normalization.pages.find(p => p.page_number === selected.page_start).normalized_text;
+        const start = selected.metadata.normalized_char_start, end = selected.metadata.normalized_char_end;
+        content.innerHTML = caption(`${selected.demonstration.label} · page ${selected.page_start} · ${selected.metadata.token_count} cl100k_base tokens · raw characters [${selected.char_start}, ${selected.char_end})`)
+          + `<pre class="data-text"><code>${marked}</code></pre>`
+          + caption(overlap ? 'Highlighted prefix = exact text repeated from the preceding chunk.' : 'First chunk on this page; no overlap prefix.')
+          + (selected.demonstration.overlap_start_inside_word ? '<div>Observed: this overlap starts inside a word. The current overlap selector uses character offsets within a token budget.</div>' : '')
+          + detail('This chunk highlighted inside its normalized page', `<pre class="data-text"><code>${escape(source.slice(0,start))}<mark>${escape(source.slice(start,end))}</mark>${escape(source.slice(end))}</code></pre>`)
+          + detail('Full chunk record, original raw text and provenance', json(selected));
+      } else if (state.stage === 4) {
+        const record = data.embeddings.chunk_sets[state.config][state.chunk];
+        content.innerHTML = caption(`${data.embeddings.model} · CLS pooling + L2 normalization · ONNX CPU · no truncation`)
+          + pre(record.embedding_input)
+          + `<div>${record.model_token_count_including_special_tokens} model tokens → ${record.vector.length} numbers. L2 norm: ${record.l2_norm.toFixed(6)}.</div>`
+          + caption('Chunker token counts and embedding-model token counts use different tokenizers. Individual vector dimensions have no named anatomical meaning.')
+          + detail('Every model token: piece and ID', pre(record.token_pieces.map((t,i) => `${i}: ${t}  [${record.token_ids[i]}]`).join('\n')))
+          + detail('All 384 embedding values — full recorded precision', json(record.vector))
+          + detail('Model revision and reproducibility', json({revision:data.embeddings.revision, dimensions:data.embeddings.dimensions, input_limit:data.embeddings.model_max_tokens, pooling:data.embeddings.pooling, packages:data.embeddings.packages}));
+      } else {
+        const result = data.retrieval.chunk_sets[state.config][state.query];
+        const query = data.embeddings.queries[state.query];
+        content.innerHTML = `<div>${escape(result.question)}</div>`
+          + caption(`Exact cosine similarity · ${result.all_ranked_matches.length} candidates ranked · top ${result.top_k} expanded · scores are not probabilities`)
+          + result.all_ranked_matches.map(m => `<details class="result" ${m.rank <= result.top_k ? 'open' : ''}><summary>Rank ${m.rank} · ${m.label} · page ${m.page} · cosine ${m.cosine_similarity.toFixed(6)}</summary>${pre(m.text)}${caption(`Raw characters [${m.char_start}, ${m.char_end}) · ${m.chunk_id}`)}</details>`).join('')
+          + detail('Exact question embedding input, tokens and all 384 values', json(query))
+          + caption('Query rewriting and reranking are disabled. Every match comes from the vectors shown in stage 5.');
+      }
+    }
+    root.addEventListener('click', e => {
+      const button = e.target.closest('[data-stage]');
+      if (!button) return;
+      state.stage = Number(button.dataset.stage); render(); saveState();
+    });
+    controls.addEventListener('change', e => {
+      const value = Number(e.target.value);
+      if (e.target.id === 'elephant-page') state.page = value;
+      if (e.target.id === 'elephant-config') { state.config = value === 0 ? 'teaching' : 'default'; state.chunk = 0; }
+      if (e.target.id === 'elephant-chunk') state.chunk = value;
+      if (e.target.id === 'elephant-question') state.query = value;
+      render(); saveState();
+    });
+    function restore(saved) {
+      if (!saved || typeof saved !== 'object') return;
+      for (const key of ['stage','page','chunk','query']) if (Number.isInteger(saved[key])) state[key] = Math.max(0,saved[key]);
+      state.stage = Math.min(state.stage,5); state.page = Math.min(state.page,2); state.query = Math.min(state.query,4);
+      state.config = saved.config === 'default' ? 'default' : 'teaching'; state.chunk = Math.min(state.chunk,chunks().length - 1);
+    }
+    restore(window.openai?.widgetState?.privateContent);
+    window.addEventListener('openai:set_globals', e => { if (e.detail?.globals?.widgetState?.privateContent) {restore(e.detail.globals.widgetState.privateContent); render();} });
+    render();
+  })();
+  </script>
+</div>

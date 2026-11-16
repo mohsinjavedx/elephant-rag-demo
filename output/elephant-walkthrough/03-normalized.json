@@ -1,0 +1,98 @@
+{
+  "document_id": "008657b2-f45f-55af-bf69-569d0a0658dc",
+  "pages": [
+    {
+      "page_number": 1,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth.\n\n\nPage 1 of 3\n\n\n",
+      "normalized_text": "\n\n# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth.\n\n\n\n\n\n",
+      "source_spans": [
+        {
+          "normalized_start": 0,
+          "normalized_end": 387,
+          "raw_start": 20,
+          "raw_end": 407
+        },
+        {
+          "normalized_start": 387,
+          "normalized_end": 390,
+          "raw_start": 418,
+          "raw_end": 421
+        }
+      ],
+      "removed_boundaries": [
+        {
+          "char_start": 0,
+          "char_end": 20,
+          "kind": "header"
+        },
+        {
+          "char_start": 407,
+          "char_end": 418,
+          "kind": "footer"
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food.\n\n\nPage 2 of 3\n\n\n",
+      "normalized_text": "\n\n# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food.\n\n\n\n\n\n",
+      "source_spans": [
+        {
+          "normalized_start": 0,
+          "normalized_end": 447,
+          "raw_start": 20,
+          "raw_end": 467
+        },
+        {
+          "normalized_start": 447,
+          "normalized_end": 450,
+          "raw_start": 478,
+          "raw_end": 481
+        }
+      ],
+      "removed_boundaries": [
+        {
+          "char_start": 0,
+          "char_end": 20,
+          "kind": "header"
+        },
+        {
+          "char_start": 467,
+          "char_end": 478,
+          "kind": "footer"
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants.\n\n\nPage 3 of 3\n\n\n",
+      "normalized_text": "\n\n# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants.\n\n\n\n\n\n",
+      "source_spans": [
+        {
+          "normalized_start": 0,
+          "normalized_end": 389,
+          "raw_start": 20,
+          "raw_end": 409
+        },
+        {
+          "normalized_start": 389,
+          "normalized_end": 392,
+          "raw_start": 420,
+          "raw_end": 423
+        }
+      ],
+      "removed_boundaries": [
+        {
+          "char_start": 0,
+          "char_end": 20,
+          "kind": "header"
+        },
+        {
+          "char_start": 409,
+          "char_end": 420,
+          "kind": "footer"
+        }
+      ]
+    }
+  ]
+}

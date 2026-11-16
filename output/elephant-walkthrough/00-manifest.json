@@ -1,0 +1,28 @@
+{
+  "source_pdf": "output/pdf/elephant-source.pdf",
+  "source_sha256": "18825034c1fd66fd36ad88d24cae75a1fe3cf94d50097fceb5cc59d6f451dd7e",
+  "document_id": "008657b2-f45f-55af-bf69-569d0a0658dc",
+  "sources": [
+    {
+      "title": "San Diego Zoo: Elephant",
+      "url": "https://animals.sandiegozoo.org/animals/elephant"
+    },
+    {
+      "title": "BAAI embedding model card",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5"
+    }
+  ],
+  "packages": {
+    "pypdf": "7.1.0",
+    "pymupdf": "2.1",
+    "pymupdf4llm": "2.1",
+    "tiktoken": "0.14.0",
+    "reportlab": "5.1.0"
+  },
+  "scope": "Standalone educational PDF, chunking, embedding and retrieval pipeline.",
+  "checks": {
+    "chunk_raw_offsets_match": true,
+    "chunk_normalized_offsets_match": true,
+    "all_non_whitespace_covered": true
+  }
+}

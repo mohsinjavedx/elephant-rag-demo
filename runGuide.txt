@@ -1,0 +1,23 @@
+Run from the elephant-rag-demo directory.
+
+View saved results immediately:
+  Open output/elephant-walkthrough/index.html in your browser.
+
+Install the project's Python environment:
+  uv sync --frozen
+
+Regenerate all stages (first run downloads the public embedding model):
+  uv run elephant-rag all
+
+Open the six-stage viewer on localhost:
+  uv run elephant-rag view --open
+
+Run a single stage:
+  uv run elephant-rag prepare
+  uv run elephant-rag embed
+  uv run elephant-rag report
+
+Check results:
+  uv run pytest -q
+
+No npm, frontend server, API key, Docker or database is needed.

@@ -1,0 +1,30 @@
+{
+  "project": "elephant-rag-demo",
+  "preparation": {
+    "pages": 3,
+    "removed_page_boundaries": 6,
+    "default_chunks": 3,
+    "teaching_chunks": 7,
+    "temporary_pdf_deleted": true
+  },
+  "data_preservation": {
+    "source_pdf_matches_original_bytes": true,
+    "extracted_normalized_chunk_embedding_and_retrieval_exports_match_original": true
+  },
+  "verification": {
+    "pytest_passed": 10,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "wheel_built": true,
+    "wheel_contains_templates_and_checksum_valid_tokenizer": true,
+    "installed_wheel_prepares_pdf_from_isolated_directory": true,
+    "offline_browser_stage_buttons": 6,
+    "browser_errors": [],
+    "mobile_horizontal_overflow": false,
+    "pdf_text_inside_page_bounds": true,
+    "source_pdf_pages": 3,
+    "walkthrough_pdf_pages": 14,
+    "local_document_links_checked": 20
+  },
+  "notes": "Checks run locally on Windows with Python 3.12; GitHub Actions is configured but has not run remotely. Model inference ran locally using the pinned public ONNX model."
+}

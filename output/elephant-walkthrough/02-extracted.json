@@ -1,0 +1,30 @@
+{
+  "checksum": "18825034c1fd66fd36ad88d24cae75a1fe3cf94d50097fceb5cc59d6f451dd7e",
+  "size_bytes": 3888,
+  "pages": [
+    {
+      "page_number": 1,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth.\n\n\nPage 1 of 3\n\n\n"
+    },
+    {
+      "page_number": 2,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food.\n\n\nPage 2 of 3\n\n\n"
+    },
+    {
+      "page_number": 3,
+      "raw_text": "ELEPHANT FIELD NOTES\n\n# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants.\n\n\nPage 3 of 3\n\n\n"
+    }
+  ],
+  "parser": "pymupdf4llm",
+  "parser_version": "2.1",
+  "text_density": {
+    "text_char_counts": [
+      326,
+      366,
+      329
+    ],
+    "low_text_page_numbers": [],
+    "min_text_chars_per_page": 50,
+    "max_low_text_page_percent": 80
+  }
+}

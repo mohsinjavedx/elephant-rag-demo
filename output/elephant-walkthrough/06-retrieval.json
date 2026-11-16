@@ -1,0 +1,572 @@
+{
+  "method": "Exact cosine similarity over all locally generated vectors",
+  "query_rewriting": false,
+  "reranking": false,
+  "database_used": false,
+  "chunk_sets": {
+    "default": [
+      {
+        "question": "How does an elephant use its nose to drink water?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "D01",
+            "chunk_id": "92b3833a-7ee8-55f4-8698-22cef2266ca3",
+            "cosine_similarity": 0.8259161710739136,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 404,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 2,
+            "label": "D02",
+            "chunk_id": "a9a60f35-0091-5542-a71d-3a1638b869be",
+            "cosine_similarity": 0.6629239320755005,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 464,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 3,
+            "label": "D03",
+            "chunk_id": "45b9f10b-0dda-51ef-ba41-8d35862321bb",
+            "cosine_similarity": 0.6404441595077515,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 406,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          }
+        ]
+      },
+      {
+        "question": "What is the difference between elephant tusks and molars?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "D02",
+            "chunk_id": "a9a60f35-0091-5542-a71d-3a1638b869be",
+            "cosine_similarity": 0.7896988987922668,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 464,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 2,
+            "label": "D01",
+            "chunk_id": "92b3833a-7ee8-55f4-8698-22cef2266ca3",
+            "cosine_similarity": 0.6423301100730896,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 404,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 3,
+            "label": "D03",
+            "chunk_id": "45b9f10b-0dda-51ef-ba41-8d35862321bb",
+            "cosine_similarity": 0.6240324378013611,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 406,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          }
+        ]
+      },
+      {
+        "question": "How many legs does an elephant have?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "D02",
+            "chunk_id": "a9a60f35-0091-5542-a71d-3a1638b869be",
+            "cosine_similarity": 0.7802004814147949,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 464,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 2,
+            "label": "D01",
+            "chunk_id": "92b3833a-7ee8-55f4-8698-22cef2266ca3",
+            "cosine_similarity": 0.6924284100532532,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 404,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 3,
+            "label": "D03",
+            "chunk_id": "45b9f10b-0dda-51ef-ba41-8d35862321bb",
+            "cosine_similarity": 0.6461877822875977,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 406,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          }
+        ]
+      },
+      {
+        "question": "How do an elephant's ears help it cool down?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "D03",
+            "chunk_id": "45b9f10b-0dda-51ef-ba41-8d35862321bb",
+            "cosine_similarity": 0.7810322642326355,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 406,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 2,
+            "label": "D01",
+            "chunk_id": "92b3833a-7ee8-55f4-8698-22cef2266ca3",
+            "cosine_similarity": 0.7026806473731995,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 404,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 3,
+            "label": "D02",
+            "chunk_id": "a9a60f35-0091-5542-a71d-3a1638b869be",
+            "cosine_similarity": 0.6290771961212158,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 464,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          }
+        ]
+      },
+      {
+        "question": "Which elephants are generally larger than Asian elephants?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "D03",
+            "chunk_id": "45b9f10b-0dda-51ef-ba41-8d35862321bb",
+            "cosine_similarity": 0.7371390461921692,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 406,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 2,
+            "label": "D02",
+            "chunk_id": "a9a60f35-0091-5542-a71d-3a1638b869be",
+            "cosine_similarity": 0.6172497272491455,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 464,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 3,
+            "label": "D01",
+            "chunk_id": "92b3833a-7ee8-55f4-8698-22cef2266ca3",
+            "cosine_similarity": 0.5920278429985046,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 404,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          }
+        ]
+      }
+    ],
+    "teaching": [
+      {
+        "question": "How does an elephant use its nose to drink water?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "T02",
+            "chunk_id": "4fa7545b-9740-55e0-9ea1-58246d7d12ee",
+            "cosine_similarity": 0.8072971105575562,
+            "page": 1,
+            "char_start": 168,
+            "char_end": 404,
+            "text": "smelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 2,
+            "label": "T01",
+            "chunk_id": "be07a817-4a38-59a1-976c-f91d26931a4e",
+            "cosine_similarity": 0.757604718208313,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 219,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects."
+          },
+          {
+            "rank": 3,
+            "label": "T05",
+            "chunk_id": "3a39f060-4561-5d1b-a875-346a18c64f78",
+            "cosine_similarity": 0.6583476066589355,
+            "page": 2,
+            "char_start": 267,
+            "char_end": 464,
+            "text": ". Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 4,
+            "label": "T03",
+            "chunk_id": "d8ace292-52d0-5bea-abb1-264717d2d70e",
+            "cosine_similarity": 0.6468349695205688,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 192,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food."
+          },
+          {
+            "rank": 5,
+            "label": "T06",
+            "chunk_id": "e826988a-32c9-5c40-b3af-626a18711821",
+            "cosine_similarity": 0.6431294083595276,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 229,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants."
+          },
+          {
+            "rank": 6,
+            "label": "T07",
+            "chunk_id": "afd76a99-bc46-532c-8741-16b05ff269fd",
+            "cosine_similarity": 0.5745726823806763,
+            "page": 3,
+            "char_start": 158,
+            "char_end": 406,
+            "text": "els. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 7,
+            "label": "T04",
+            "chunk_id": "98541ff2-735d-51a4-b043-dc12412790fa",
+            "cosine_similarity": 0.5029398798942566,
+            "page": 2,
+            "char_start": 147,
+            "char_end": 315,
+            "text": ". Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles."
+          }
+        ]
+      },
+      {
+        "question": "What is the difference between elephant tusks and molars?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "T03",
+            "chunk_id": "d8ace292-52d0-5bea-abb1-264717d2d70e",
+            "cosine_similarity": 0.8186436295509338,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 192,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food."
+          },
+          {
+            "rank": 2,
+            "label": "T05",
+            "chunk_id": "3a39f060-4561-5d1b-a875-346a18c64f78",
+            "cosine_similarity": 0.7380316257476807,
+            "page": 2,
+            "char_start": 267,
+            "char_end": 464,
+            "text": ". Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 3,
+            "label": "T04",
+            "chunk_id": "98541ff2-735d-51a4-b043-dc12412790fa",
+            "cosine_similarity": 0.6684133410453796,
+            "page": 2,
+            "char_start": 147,
+            "char_end": 315,
+            "text": ". Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles."
+          },
+          {
+            "rank": 4,
+            "label": "T07",
+            "chunk_id": "afd76a99-bc46-532c-8741-16b05ff269fd",
+            "cosine_similarity": 0.6443904638290405,
+            "page": 3,
+            "char_start": 158,
+            "char_end": 406,
+            "text": "els. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 5,
+            "label": "T01",
+            "chunk_id": "be07a817-4a38-59a1-976c-f91d26931a4e",
+            "cosine_similarity": 0.6362357139587402,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 219,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects."
+          },
+          {
+            "rank": 6,
+            "label": "T02",
+            "chunk_id": "4fa7545b-9740-55e0-9ea1-58246d7d12ee",
+            "cosine_similarity": 0.6340598464012146,
+            "page": 1,
+            "char_start": 168,
+            "char_end": 404,
+            "text": "smelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 7,
+            "label": "T06",
+            "chunk_id": "e826988a-32c9-5c40-b3af-626a18711821",
+            "cosine_similarity": 0.5860326290130615,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 229,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants."
+          }
+        ]
+      },
+      {
+        "question": "How many legs does an elephant have?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "T05",
+            "chunk_id": "3a39f060-4561-5d1b-a875-346a18c64f78",
+            "cosine_similarity": 0.8157974481582642,
+            "page": 2,
+            "char_start": 267,
+            "char_end": 464,
+            "text": ". Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 2,
+            "label": "T03",
+            "chunk_id": "d8ace292-52d0-5bea-abb1-264717d2d70e",
+            "cosine_similarity": 0.7085469961166382,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 192,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food."
+          },
+          {
+            "rank": 3,
+            "label": "T01",
+            "chunk_id": "be07a817-4a38-59a1-976c-f91d26931a4e",
+            "cosine_similarity": 0.6885042786598206,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 219,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects."
+          },
+          {
+            "rank": 4,
+            "label": "T02",
+            "chunk_id": "4fa7545b-9740-55e0-9ea1-58246d7d12ee",
+            "cosine_similarity": 0.6433714628219604,
+            "page": 1,
+            "char_start": 168,
+            "char_end": 404,
+            "text": "smelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 5,
+            "label": "T07",
+            "chunk_id": "afd76a99-bc46-532c-8741-16b05ff269fd",
+            "cosine_similarity": 0.6387837529182434,
+            "page": 3,
+            "char_start": 158,
+            "char_end": 406,
+            "text": "els. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 6,
+            "label": "T06",
+            "chunk_id": "e826988a-32c9-5c40-b3af-626a18711821",
+            "cosine_similarity": 0.6191820502281189,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 229,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants."
+          },
+          {
+            "rank": 7,
+            "label": "T04",
+            "chunk_id": "98541ff2-735d-51a4-b043-dc12412790fa",
+            "cosine_similarity": 0.4319327175617218,
+            "page": 2,
+            "char_start": 147,
+            "char_end": 315,
+            "text": ". Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles."
+          }
+        ]
+      },
+      {
+        "question": "How do an elephant's ears help it cool down?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "T06",
+            "chunk_id": "e826988a-32c9-5c40-b3af-626a18711821",
+            "cosine_similarity": 0.8320691585540771,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 229,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants."
+          },
+          {
+            "rank": 2,
+            "label": "T02",
+            "chunk_id": "4fa7545b-9740-55e0-9ea1-58246d7d12ee",
+            "cosine_similarity": 0.6864952445030212,
+            "page": 1,
+            "char_start": 168,
+            "char_end": 404,
+            "text": "smelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 3,
+            "label": "T01",
+            "chunk_id": "be07a817-4a38-59a1-976c-f91d26931a4e",
+            "cosine_similarity": 0.6850266456604004,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 219,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects."
+          },
+          {
+            "rank": 4,
+            "label": "T07",
+            "chunk_id": "afd76a99-bc46-532c-8741-16b05ff269fd",
+            "cosine_similarity": 0.6479916572570801,
+            "page": 3,
+            "char_start": 158,
+            "char_end": 406,
+            "text": "els. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 5,
+            "label": "T05",
+            "chunk_id": "3a39f060-4561-5d1b-a875-346a18c64f78",
+            "cosine_similarity": 0.6346410512924194,
+            "page": 2,
+            "char_start": 267,
+            "char_end": 464,
+            "text": ". Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 6,
+            "label": "T03",
+            "chunk_id": "d8ace292-52d0-5bea-abb1-264717d2d70e",
+            "cosine_similarity": 0.621033787727356,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 192,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food."
+          },
+          {
+            "rank": 7,
+            "label": "T04",
+            "chunk_id": "98541ff2-735d-51a4-b043-dc12412790fa",
+            "cosine_similarity": 0.49967777729034424,
+            "page": 2,
+            "char_start": 147,
+            "char_end": 315,
+            "text": ". Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles."
+          }
+        ]
+      },
+      {
+        "question": "Which elephants are generally larger than Asian elephants?",
+        "top_k": 3,
+        "all_ranked_matches": [
+          {
+            "rank": 1,
+            "label": "T07",
+            "chunk_id": "afd76a99-bc46-532c-8741-16b05ff269fd",
+            "cosine_similarity": 0.8271409273147583,
+            "page": 3,
+            "char_start": 158,
+            "char_end": 406,
+            "text": "els. African elephants generally have larger ears than Asian elephants.\n\n## **Size**\n\n\nElephants are the largest living land mammals. Body size varies with species, sex, and age.\n\nAfrican savanna elephants are generally larger than Asian elephants."
+          },
+          {
+            "rank": 2,
+            "label": "T06",
+            "chunk_id": "e826988a-32c9-5c40-b3af-626a18711821",
+            "cosine_similarity": 0.6601454615592957,
+            "page": 3,
+            "char_start": 22,
+            "char_end": 229,
+            "text": "# **Ears and body size**\n\n## **Ears**\n\n\nElephant ears help release body heat. Flapping them helps cool blood passing through their\n\nvessels. African elephants generally have larger ears than Asian elephants."
+          },
+          {
+            "rank": 3,
+            "label": "T03",
+            "chunk_id": "d8ace292-52d0-5bea-abb1-264717d2d70e",
+            "cosine_similarity": 0.6323240995407104,
+            "page": 2,
+            "char_start": 22,
+            "char_end": 192,
+            "text": "# **Teeth and legs**\n\n## **Teeth and tusks**\n\n\nTusks are elongated incisor teeth. Elephants use tusks for digging and defense. Inside the\n\nmouth, molars grind plant food."
+          },
+          {
+            "rank": 4,
+            "label": "T01",
+            "chunk_id": "be07a817-4a38-59a1-976c-f91d26931a4e",
+            "cosine_similarity": 0.6196619272232056,
+            "page": 1,
+            "char_start": 22,
+            "char_end": 219,
+            "text": "# **The elephant's nose**\n\n## **Nose and trunk**\n\n\nAn elephant's trunk combines its nose and upper lip. The trunk has nostrils for breathing and\n\nsmelling. It can also grasp food and touch objects."
+          },
+          {
+            "rank": 5,
+            "label": "T05",
+            "chunk_id": "3a39f060-4561-5d1b-a875-346a18c64f78",
+            "cosine_similarity": 0.6144140362739563,
+            "page": 2,
+            "char_start": 267,
+            "char_end": 464,
+            "text": ". Tusks and\n\nchewing teeth have different roles.\n\n## **Four legs**\n\n\nAn elephant has four legs. The legs support its large body and allow it to walk. Legs provide\n\nmovement; the trunk handles food."
+          },
+          {
+            "rank": 6,
+            "label": "T02",
+            "chunk_id": "4fa7545b-9740-55e0-9ea1-58246d7d12ee",
+            "cosine_similarity": 0.5331594347953796,
+            "page": 1,
+            "char_start": 168,
+            "char_end": 404,
+            "text": "smelling. It can also grasp food and touch objects.\n\n\nTo drink, an elephant draws water into its trunk and then pours it into its mouth. The trunk is\n\nflexible and contains no bones. It performs different jobs from the elephant's teeth."
+          },
+          {
+            "rank": 7,
+            "label": "T04",
+            "chunk_id": "98541ff2-735d-51a4-b043-dc12412790fa",
+            "cosine_similarity": 0.37678754329681396,
+            "page": 2,
+            "char_start": 147,
+            "char_end": 315,
+            "text": ". Inside the\n\nmouth, molars grind plant food.\n\n\nNew molars move forward from the back of the jaw as older ones wear down. Tusks and\n\nchewing teeth have different roles."
+          }
+        ]
+      }
+    ]
+  }
+}

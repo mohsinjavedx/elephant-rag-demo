@@ -1,0 +1,14 @@
+{
+  "verified_score_calculations": 50,
+  "chunk_sets": {
+    "default": 3,
+    "teaching": 7
+  },
+  "pdf_pages": {
+    "elephant-processing-walkthrough.pdf": 14,
+    "elephant-source.pdf": 3
+  },
+  "browser_errors": [],
+  "mobile_overflow": false,
+  "all_local_guide_links_exist": true
+}

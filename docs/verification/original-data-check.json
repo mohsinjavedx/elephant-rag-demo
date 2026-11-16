@@ -1,0 +1,11 @@
+{
+  "pdf_pages": {
+    "elephant-processing-walkthrough.pdf": 14,
+    "elephant-source.pdf": 3
+  },
+  "recomputed_similarity_scores": 50,
+  "archive_files": 15,
+  "chunk_offsets_and_text_coverage": "passed",
+  "archive_contents_match_exports": true,
+  "source_checksum_matches": true
+}
